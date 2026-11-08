@@ -1,0 +1,22 @@
+{
+  "name": "the-room-core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first, signed shared-memory core with double-verified handoffs and human-controlled exits.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "room": "node src/cli.ts",
+    "test": "node --test tests/*.test.ts",
+    "test:clean": "node --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "verify:portable": "node verify.ts",
+    "verify:scaffold": "node tools/verify-transcript.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "typescript": "^5.9.3"
+  }
+}

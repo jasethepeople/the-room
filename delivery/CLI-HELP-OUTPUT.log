@@ -1,0 +1,34 @@
+
+> the-room-core@0.1.0 room
+> node src/cli.ts help
+
+The Room — local signed shared-memory core
+
+Commands:
+  spawn <room-slug> <room-name...> [--members N] [--home PATH]
+  verify <room-id> [--home PATH]
+  status <room-id> [--home PATH]
+  members <room-id> [--home PATH]
+  member-add <room-id> <fixture-name...> [--budget N] [--home PATH]
+  member-add-ollama <room-id> <member-name...> --budget N [--home PATH]
+  member-leave <room-id> <harness-member-or-fingerprint> [--home PATH]
+  task <room-id> <human-name-or-fingerprint> <harness-member-or-fingerprint> <prompt...> [--thread ID] [--home PATH]
+  run-member <room-id> <ollama-member-or-fingerprint> <assignment-event-id> [--ollama-host URL] [--model NAME] [--home PATH]
+  turn <room-id> <member-name-or-fingerprint> <text...> [--thread ID] [--input-tokens N] [--output-tokens N] [--home PATH]
+  strip-demo [--fixture log-tail|repeated-headers|mixed|filler|protected|frames|padding|combined] [--home PATH]
+  challenge <room-id> <member> <target-event-id> <claim...> [--grounds factual|procedural|doctrinal] [--ref-event ID]... [--home PATH]
+  verdict <room-id> <member> <challenge-id> <upheld|refuted|unproven> <rationale...> [--ref-event ID]... [--home PATH]
+  proposal <room-id> <member> <statement...> [--thread ID] [--supersedes ID] [--home PATH]
+  cosign <room-id> <member> <proposal-id> <support|oppose> [--home PATH]
+  canon <room-id> <proposal-id> <cosign-id,...> <reason...> [--new-rule ID --min-cosigns N] [--home PATH]
+  budget <room-id> <member> <pause|resume> [--reason human|exhausted|rule] [--thread ID] [--home PATH]
+  seam <room-id> <note...> [--span FROM_EVENT_ID,TO_EVENT_ID]... [--home PATH]
+  seal <room-id> [--home PATH]
+  exit-request <room-id> <member> <target-event-id> <destination...> [--home PATH]
+  exit-preview <room-id> <request-event-id> [--home PATH]
+  exit-decide <room-id> <request-event-id> <accept|send_back|kill> <reviewed-head-hash> <note...> [--home PATH]
+  exit-release <room-id> <request-event-id> [--home PATH]
+  import <room-id> <event-file> [--home PATH]
+
+All ledger entries use frozen contract event bodies. Fixture members do not call models. One explicitly added Ollama-backed member can call a local Ollama instance; A2A remains unavailable.
+

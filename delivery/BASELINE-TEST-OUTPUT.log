@@ -1,0 +1,222 @@
+
+> the-room-core@0.1.0 test
+> node --test tests/*.test.ts
+
+TAP version 13
+# Subtest: contract verifier runs from an empty copied directory using only exported files
+ok 1 - contract verifier runs from an empty copied directory using only exported files
+  ---
+  duration_ms: 89.79468
+  type: 'test'
+  ...
+# Subtest: genesis fingerprint mismatch is rejected before the transcript is trusted
+ok 2 - genesis fingerprint mismatch is rejected before the transcript is trusted
+  ---
+  duration_ms: 77.359492
+  type: 'test'
+  ...
+# Subtest: a one-byte payload edit fails at the named signed event
+ok 3 - a one-byte payload edit fails at the named signed event
+  ---
+  duration_ms: 75.018277
+  type: 'test'
+  ...
+# Subtest: duplicate JSON keys are rejected before canonicalization
+ok 4 - duplicate JSON keys are rejected before canonicalization
+  ---
+  duration_ms: 168.410215
+  type: 'test'
+  ...
+# Subtest: self-certifying joins pin fingerprints, and agent seam events fail role resolution
+ok 5 - self-certifying joins pin fingerprints, and agent seam events fail role resolution
+  ---
+  duration_ms: 208.361212
+  type: 'test'
+  ...
+# Subtest: a challenge may have one verdict, and the verdict remains a signed historical event
+ok 6 - a challenge may have one verdict, and the verdict remains a signed historical event
+  ---
+  duration_ms: 183.427226
+  type: 'test'
+  ...
+# Subtest: canon replay uses typed currentRule and updates it only after a verified enactment
+ok 7 - canon replay uses typed currentRule and updates it only after a verified enactment
+  ---
+  duration_ms: 197.222467
+  type: 'test'
+  ...
+# Subtest: proposal supersedes must cite an earlier proposal
+ok 8 - proposal supersedes must cite an earlier proposal
+  ---
+  duration_ms: 94.83008
+  type: 'test'
+  ...
+# Subtest: seals checkpoint seams without ending the chain; latest and historical snapshots are checked separately
+ok 9 - seals checkpoint seams without ending the chain; latest and historical snapshots are checked separately
+  ---
+  duration_ms: 532.578333
+  type: 'test'
+  ...
+# Subtest: migrated CLI-spawned room passes the unchanged root verifier
+ok 10 - migrated CLI-spawned room passes the unchanged root verifier
+  ---
+  duration_ms: 751.937755
+  type: 'test'
+  ...
+# Subtest: legacy scaffold verifier runs from an empty copied directory with only genesis and transcript
+ok 11 - legacy scaffold verifier runs from an empty copied directory with only genesis and transcript
+  ---
+  duration_ms: 59.641193
+  type: 'test'
+  ...
+# Subtest: spawn writes typed genesis, a signed system event, and keeps Ed25519 keys outside the room tree
+ok 12 - spawn writes typed genesis, a signed system event, and keeps Ed25519 keys outside the room tree
+  ---
+  duration_ms: 375.047405
+  type: 'test'
+  ...
+# Subtest: turns are exact signed envelopes and a one-byte transcript edit is rejected at that event
+ok 13 - turns are exact signed envelopes and a one-byte transcript edit is rejected at that event
+  ---
+  duration_ms: 829.241407
+  type: 'test'
+  ...
+# Subtest: fixture task turns, challenges, and the single permitted verdict stay in the signed log
+ok 14 - fixture task turns, challenges, and the single permitted verdict stay in the signed log
+  ---
+  duration_ms: 1807.171704
+  type: 'test'
+  ...
+# ALERT JASON: event admission rejected; accepted transcript unchanged: local candidate check failed: event 8: insufficient supporting cosigns
+# Subtest: proposal supersedes cite an earlier proposal and canon uses the typed current rule
+ok 15 - proposal supersedes cite an earlier proposal and canon uses the typed current rule
+  ---
+  duration_ms: 2754.692234
+  type: 'test'
+  ...
+# ALERT JASON: event admission rejected; accepted transcript unchanged: local candidate check failed: event 3: member budget is paused
+# Subtest: budget pauses are signed, failed output is quarantined without changing the ledger, and fixture membership is self-certified
+ok 16 - budget pauses are signed, failed output is quarantined without changing the ledger, and fixture membership is self-certified
+  ---
+  duration_ms: 2233.966343
+  type: 'test'
+  ...
+# ALERT JASON: event admission rejected; accepted transcript unchanged: Checkpoint snapshot already exists: /tmp/the-room-test-0OEeJ2/rooms/seal-test-680459b3/seams.5.md
+# Subtest: seam checkpoints snapshot the exact current seams before append and re-seal validates latest and historical snapshots
+ok 17 - seam checkpoints snapshot the exact current seams before append and re-seal validates latest and historical snapshots
+  ---
+  duration_ms: 1870.554367
+  type: 'test'
+  ...
+# Subtest: exit release requires signed human acceptance and only returns the post-write verified turn
+ok 18 - exit release requires signed human acceptance and only returns the post-write verified turn
+  ---
+  duration_ms: 2010.844847
+  type: 'test'
+  ...
+# Subtest: log-tail fixture removes only declared trailing tool framing and keeps signal bytes exact
+ok 19 - log-tail fixture removes only declared trailing tool framing and keeps signal bytes exact
+  ---
+  duration_ms: 13.458959
+  type: 'test'
+  ...
+# Subtest: repeated-header fixture removes only the duplicate marked block
+ok 20 - repeated-header fixture removes only the duplicate marked block
+  ---
+  duration_ms: 2.722676
+  type: 'test'
+  ...
+# Subtest: mixed fixture removes one duplicate header, one repeated status block, and only the trailing log tail
+ok 21 - mixed fixture removes one duplicate header, one repeated status block, and only the trailing log tail
+  ---
+  duration_ms: 1.386823
+  type: 'test'
+  ...
+# Subtest: unknown content and a very long non-matching line pass through byte-identically
+ok 22 - unknown content and a very long non-matching line pass through byte-identically
+  ---
+  duration_ms: 61.046956
+  type: 'test'
+  ...
+# Subtest: clean turns pass unchanged and receipts are exact, event-linked, and hash-chained
+ok 23 - clean turns pass unchanged and receipts are exact, event-linked, and hash-chained
+  ---
+  duration_ms: 1216.606248
+  type: 'test'
+  ...
+# Subtest: oversize input is rejected before stripping even when duplicate removal would bring it under the limit
+ok 24 - oversize input is rejected before stripping even when duplicate removal would bring it under the limit
+  ---
+  duration_ms: 464.9273
+  type: 'test'
+  ...
+# ALERT JASON: event admission rejected; accepted transcript unchanged: local candidate check failed: event 3: member budget is paused
+# Subtest: a policy-rejected turn remains rejected before its strip receipt can be admitted
+ok 25 - a policy-rejected turn remains rejected before its strip receipt can be admitted
+  ---
+  duration_ms: 565.840171
+  type: 'test'
+  ...
+# Subtest: strip-demo spawns a room that the frozen root verifier accepts
+ok 26 - strip-demo spawns a room that the frozen root verifier accepts
+  ---
+  duration_ms: 981.630269
+  type: 'test'
+  ...
+# Subtest: filler fixture strips the specified leading, request, and trailing frames without capitalization
+ok 27 - filler fixture strips the specified leading, request, and trailing frames without capitalization
+  ---
+  duration_ms: 3.147177
+  type: 'test'
+  ...
+# Subtest: protected fixture preserves code, quotes, URLs, paths, filenames, identifiers, and JSON
+ok 28 - protected fixture preserves code, quotes, URLs, paths, filenames, identifiers, and JSON
+  ---
+  duration_ms: 2.838476
+  type: 'test'
+  ...
+# Subtest: softener fixture removes each declared F3 phrase exactly
+ok 29 - softener fixture removes each declared F3 phrase exactly
+  ---
+  duration_ms: 3.659998
+  type: 'test'
+  ...
+# Subtest: padding fixture applies F4 and deletion-only punctuation and whitespace repairs
+ok 30 - padding fixture applies F4 and deletion-only punctuation and whitespace repairs
+  ---
+  duration_ms: 2.100055
+  type: 'test'
+  ...
+# Subtest: combined fixture applies wrapper stripping before filler stripping and records both rule sets
+ok 31 - combined fixture applies wrapper stripping before filler stripping and records both rule sets
+  ---
+  duration_ms: 1.438443
+  type: 'test'
+  ...
+# Subtest: every wrapper, filler, and combined fixture output is an exact input subsequence
+ok 32 - every wrapper, filler, and combined fixture output is an exact input subsequence
+  ---
+  duration_ms: 5.153202
+  type: 'test'
+  ...
+# Subtest: strip-demo accepts filler and combined fixtures and their rooms pass the frozen verifier
+ok 33 - strip-demo accepts filler and combined fixtures and their rooms pass the frozen verifier
+  ---
+  duration_ms: 2361.770414
+  type: 'test'
+  ...
+# Subtest: F1/F2 variants are case-insensitive and whole-phrase while preserving every kept character
+ok 34 - F1/F2 variants are case-insensitive and whole-phrase while preserving every kept character
+  ---
+  duration_ms: 1.716984
+  type: 'test'
+  ...
+1..34
+# tests 34
+# suites 0
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20419.57212

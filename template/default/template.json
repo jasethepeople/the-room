@@ -1,0 +1,33 @@
+{
+  "id": "default",
+  "version": "1",
+  "canonRule": {
+    "id": "one-supporting-cosign",
+    "minCosigns": 1
+  },
+  "threads": [
+    {
+      "id": "main",
+      "title": "Main"
+    }
+  ],
+  "memberSlots": [
+    {
+      "name": "Jason",
+      "role": "human",
+      "modelId": "human",
+      "subscriptions": ["main"],
+      "budgetTokens": 100000,
+      "tools": []
+    },
+    {
+      "name": "Fixture One",
+      "role": "harness-agent",
+      "modelId": "fixture:scripted-1",
+      "subscriptions": ["main"],
+      "budgetTokens": 12000,
+      "tools": []
+    }
+  ],
+  "headerSeed": "# {{ROOM_NAME}}\n\nStandalone signed room. The JSONL transcript is authoritative.\n"
+}
